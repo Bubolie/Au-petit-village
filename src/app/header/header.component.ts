@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   isMenuOpen = false;
 
-  clickMenu () {this.isMenuOpen = !this.isMenuOpen}
+  openMenu () {this.isMenuOpen = !this.isMenuOpen}
 
+  closeMenu () {this.isMenuOpen = false}
 }
