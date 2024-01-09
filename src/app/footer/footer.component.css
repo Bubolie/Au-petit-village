@@ -1,4 +1,17 @@
 footer {
   background-color: #151217;
   color: #da001e;
+  padding: 2em;
+  font-size: 12px;
+  text-align: center;
+}
+img {
+  background-color: white;
+  margin: 1em;
+  border: 1px solid white;
+  border-radius: 10%;
+}
+
+.footer-logo {
+  padding: 1em;
 }
