@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="header-logo">
+    <a routerLink="/"
+      ><img
+        src="../../assets/image/logo/logo-site.png"
+        alt="Casque ailé en noir et blanc"
+        class="logo-site"
+    /></a>
+  </div>
+
+  <nav class="header-nav">
+    <button class="nav-btn" (click)="openMenu()">
+      <img
+        src="../../assets/image/logo/burger-bar.png"
+        alt="Trois barres horizontales"
+        class="menu-logo"
+      />
+    </button>
+
+    <ul class="nav-list" [ngClass]="{'active': isMenuOpen}">
+      <li class="nav-text"><a routerLink="/about" (click)="closeMenu()">A propos</a></li>
+      <li class="nav-text"><a routerLink="/product" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </nav>
+</header>

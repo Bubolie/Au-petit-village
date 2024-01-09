@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+/* reset CSS */
+@font-face {
+  font-family: 'Confortaa';
+  src:
+    url('./assets/fonts/Comfortaa/woff2/Comfortaa-VariableFont_wght.woff2'),
+    url('./assets/fonts/Comfortaa/ttf/Comfortaa-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bubbleboddy neue';
+  src:
+    url('./assets/fonts/BubbleboddyNeue/woff2/bubbleboddyneue-regular\ trial.woff2'),
+    url('./assets/fonts/BubbleboddyNeue/ttf/bubbleboddyneue-regular\ trial.ttf') format('truetype');
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Confortaa', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bubbleboddy neue', serif;
+}
