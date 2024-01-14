@@ -8,7 +8,7 @@ import products from '../../assets/products.json'
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  title = 'Bienvenue Au Petit Village'
+  title = 'Au Petit Village'
 
   products: any[] = products;
 
