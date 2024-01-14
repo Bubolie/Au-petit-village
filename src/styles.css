@@ -15,6 +15,7 @@
 }
 
 html {
+  font-family: 'Confortaa', serif;
   box-sizing: border-box;
   font-size: 16px;
 }
@@ -50,10 +51,6 @@ img {
   height: auto;
 }
 
-body {
-  font-family: 'Confortaa', serif;
-}
-
 h1,
 h2,
 h3,
@@ -61,4 +58,9 @@ h4,
 h5,
 h6 {
   font-family: 'Bubbleboddy neue', serif;
+}
+
+a:hover {
+  opacity: 25%;
+  font-weight: bold;
 }

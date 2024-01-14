@@ -1,3 +1,54 @@
 <main class="main">
-  <h1>{{title}}</h1>
+  <section class="presentation">
+    <h1 class="presentation-title"> Bienvenue "{{ title }}"</h1>
+    <div class="presentation-article">
+      <div class="description">
+        <p class="description-text">
+          Découvrez l'univers magique d'Astérix et Obélix à travers nos
+          figurines uniques !
+        </p>
+        <p class="description-text">
+          Petit Village, nous sommes passionnés par l'univers créé par Albert
+          Uderzo et René Goscinny. Nous avons transformé cette passion en art en
+          créant des figurines exceptionnelles qui captivent l'esprit et le
+          charme intemporel d'Astérix et Obélix.
+        </p>
+        <p class="description-text">
+          Venez donc explorer notre collection exclusive de figurines fidèles
+          aux détails originaux des célèbres Gaulois. Chaque pièce est
+          soigneusement conçue avec un amour du détail et une qualité artisanale
+          exceptionnelle.
+        </p>
+      </div>
+      <div class="description-image">
+        <img
+          class="image"
+          src="../../assets/image/fond-asterix.png"
+          alt="Figurines de Panoramix, Obélix et Astérix"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="catalog">
+    <h2 class="catalog-title">Nos Produits</h2>
+    <div class="catalog-product">
+      <article *ngFor="let product of products" class="product">
+        <div class="product-image">
+          <img
+            src="{{ product.image }}"
+            alt="{{ product.imageDescription }}"
+            class="image-fig"
+            width="150"
+          />
+        </div>
+        <div class="product-description">
+          <h3 class="product-title">{{ product.name }}</h3>
+          <p class="product-price">Prix : {{ product.price }}€</p>
+          <button (click)="moreDetails(product.name)" class="product-button">
+            Plus de détails
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
 </main>

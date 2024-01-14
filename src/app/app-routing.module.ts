@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
-  {path: "product", component: ProductComponent},
+  {path: "product/:productName", component: ProductComponent},
   {path: "about", component: AboutComponent},
 ];
 
