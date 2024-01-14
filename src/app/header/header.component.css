@@ -8,8 +8,8 @@
   border-radius: 25%;
 }
 
-.nav-btn :hover {
-  opacity: 50%;
+.nav-btn:hover {
+  opacity: 40%;
 }
 
 .nav-text a {
@@ -43,8 +43,4 @@ header {
   background-color: #fdd90b;
   border-bottom: 3px solid #da001e;
   height: 100px;
-}
-
-a :hover {
-  opacity: 80%;
 }
