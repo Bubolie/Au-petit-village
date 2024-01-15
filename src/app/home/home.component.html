@@ -1,6 +1,6 @@
 <main class="main">
   <section class="presentation">
-    <h1 class="presentation-title"> Bienvenue "{{ title }}"</h1>
+    <h1 class="presentation-title">Bienvenue "{{ title }}"</h1>
     <div class="presentation-article">
       <div class="description">
         <p class="description-text">
@@ -31,8 +31,34 @@
   </section>
   <section class="catalog">
     <h2 class="catalog-title">Nos Produits</h2>
+    <div class="catalog-filter">
+      <input
+        type="text"
+        id="search"
+        placeholder="Rechercher un produit"
+        [(ngModel)]="searchTerm"
+        class="filter filter-name"
+      />
+      <select
+        name="sortOrder"
+        id="sortOrder"
+        [(ngModel)]="sortOrder"
+        class="filter filter-price"
+      >
+        <option value="croissant">Prix croissant</option>
+        <option value="decroissant">Prix décroissant</option>
+      </select>
+    </div>
+
     <div class="catalog-product">
-      <article *ngFor="let product of products" class="product">
+      <article
+        *ngFor="
+          let product of products
+            | sortByPrice : sortOrder
+            | filterByName : searchTerm
+        "
+        class="product"
+      >
         <div class="product-image">
           <img
             src="{{ product.image }}"
@@ -49,6 +75,9 @@
           </button>
         </div>
       </article>
+      <div class="none-product" *ngIf="(products | sortByPrice : sortOrder | filterByName : searchTerm).length === 0">
+        Aucun produit correspondant à votre recherche.
+      </div>
     </div>
   </section>
 </main>

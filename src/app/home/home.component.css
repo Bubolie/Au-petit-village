@@ -18,7 +18,7 @@
 .catalog {
   background-color: #fdd90b;
   border: 5px solid #da001e;
-  border-radius: 3%;
+  border-radius: 20px;
   margin-top: 15%;
 }
 
@@ -26,6 +26,21 @@
   font-size: 2.8em;
   text-align: center;
   margin: 1em;
+}
+
+.catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter {
+  background-color: #f9d0a3;
+  font-size: 1.2em;
+  border-radius: 10px;
+  margin: 0.5em 1.5em;
+  padding: 5px;
 }
 
 .catalog-product {
@@ -70,7 +85,6 @@
   border: 2px solid #151217;
   border-radius: 10px;
   background-color: #da001e;
-  color: #151217;
   padding: 0.8em;
 }
 
@@ -79,8 +93,16 @@
   background-color: #fdd90b;
 }
 
+.none-product {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1.5em;
+  width: 100%;
+  text-align: center;
+}
+
 @media screen and (min-width : 768px) {
-  .main{
+  .main {
     padding: 4% 6%;
   }
 
@@ -107,6 +129,7 @@
   .description {
     max-width: 450px;
   }
+
   .product {
     width: 28%;
   }
