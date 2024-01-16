@@ -1,1 +1,21 @@
-<p>product works!</p>
+<main class="main">
+  <div class="product">
+    <h2 class="product-title">Figurine {{ productName }}</h2>
+    <div class="product-details">
+      <img
+        class="image"
+        src="{{ products.image }}"
+        alt="{{ products.imageDescription }}"
+        width="150"
+      />
+      <div class="text">
+        <h3>Détail du produit :</h3>
+        <p class="text-description">{{ products.description }}</p>
+        <h3>Hauteur de la figurine :</h3>
+        <p class="text-height">{{ products.height }}</p>
+        <h3>Prix :</h3>
+        <p class="text-price">{{ products.price }}€</p>
+      </div>
+    </div>
+  </div>
+</main>
