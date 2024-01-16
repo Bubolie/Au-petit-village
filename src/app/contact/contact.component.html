@@ -1,1 +1,65 @@
-<p>contact works!</p>
+<main>
+  <section>
+    <h2>Contacter-nous</h2>
+    <p>
+      Merci de compléter ce formulaire pour prendre contact avec nous, nous vous
+      repondrons dès que possible
+    </p>
+    <div>
+      <form>
+        <label for="name">Nom:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="contactForm.name"
+          required
+          autocomplete="name"
+        />
+
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="contactForm.email"
+          required
+          autocomplete="email"
+        />
+
+        <label for="subject">Sujet:</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          [(ngModel)]="contactForm.subject"
+          required
+        />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          [(ngModel)]="contactForm.message"
+          required
+        ></textarea>
+
+        <a
+          [href]="
+            'mailto:aupetitvillage@mail.com?subject=' +
+            contactForm.subject +
+            '&body=' +
+            'Nom: ' +
+            contactForm.name +
+            '%0AEmail: ' +
+            contactForm.email +
+            '%0AMessage: ' +
+            contactForm.message
+          "
+        >
+          <button type="button">Envoyer</button>
+        </a>
+      </form>
+    </div>
+  </section>
+</main>
