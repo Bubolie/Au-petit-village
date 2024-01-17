@@ -18,6 +18,7 @@ html {
   font-family: 'Confortaa', serif;
   box-sizing: border-box;
   font-size: 16px;
+  background-color: #f9d0a3;
 }
 
 *,
@@ -58,6 +59,17 @@ h4,
 h5,
 h6 {
   font-family: 'Bubbleboddy neue', serif;
+}
+
+main {
+  padding: 4% 8%;
+}
+
+h1 {
+  font-size: 3.5em;
+  text-align: center;
+  margin-bottom: 0.7em ;
+  font-weight: bold;
 }
 
 a:hover {
