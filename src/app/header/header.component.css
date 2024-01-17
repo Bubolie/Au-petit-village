@@ -17,6 +17,10 @@
   border: 1px dotted #151217
 }
 
+.logo-site {
+  width: 100px;
+}
+
 .nav-list {
   display: none;
   position: absolute;
