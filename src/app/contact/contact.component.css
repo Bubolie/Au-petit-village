@@ -1,0 +1,48 @@
+.contact {
+  background-color: #fdd90b;
+  border: 5px double #da001e;
+  border-radius: 20px;
+  margin: 10% 0;
+  padding: 5%;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 5%;
+}
+
+.contact-required {
+  color: #da001e;
+  font-size: small;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 5px double #151217;
+  border-radius: 10px;
+}
+
+.field-message {
+  height: 10em;
+}
+
+button {
+  width: 100%;
+}
+
+@media screen and (min-width : 768px) {
+  .contact {
+    margin: 3% 8%;
+  }
+}

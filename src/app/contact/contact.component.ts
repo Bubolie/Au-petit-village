@@ -13,4 +13,13 @@ export class ContactComponent {
     message: ''
   };
 
-}
+  areAllRequired(): boolean {
+     return (
+      this.contactForm.name !== '' &&
+      this.contactForm.email !== '' &&
+      this.contactForm.subject !== '' &&
+      this.contactForm.message !== ''
+      )
+    }
+  }
+  
