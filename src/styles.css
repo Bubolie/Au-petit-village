@@ -14,8 +14,10 @@
     url('./assets/fonts/BubbleboddyNeue/ttf/bubbleboddyneue-regular\ trial.ttf') format('truetype');
 }
 
-html {
+input, html, button, textarea {
   font-family: 'Confortaa', serif;
+}
+html {
   box-sizing: border-box;
   font-size: 16px;
   background-color: #f9d0a3;
@@ -75,4 +77,18 @@ h1 {
 a:hover {
   opacity: 25%;
   font-weight: bold;
+}
+
+button {
+  border: 2px solid #151217;
+  border-radius: 10px;
+  background-color: #da001e;
+  color: #151217;
+  padding: 0.6em;
+  margin: 0.4em;
+}
+
+button:hover {
+  border: 2px solid #da001e;
+  background-color: #fdd90b;
 }

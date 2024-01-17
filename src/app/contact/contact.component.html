@@ -1,1 +1,69 @@
-<p>contact works!</p>
+<main class="main">
+  <section class="contact">
+    <h2 class="contact-title">Contactez-nous</h2>
+    <p class="contact-text">
+      Merci de compléter ce formulaire pour prendre contact avec nous, nous vous
+      repondrons dès que possible.
+    </p>
+    <p class="contact-required" [hidden]="areAllRequired()">
+      Attention : Tous les champs sont requis
+    </p>
+    <form class="contact-form">
+      <div class="form-field">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nom"
+          [(ngModel)]="contactForm.name"
+          required
+          autocomplete="name"
+          class="field field-name"
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="E-mail"
+          [(ngModel)]="contactForm.email"
+          required
+          autocomplete="email"
+          class="field field-email"
+        />
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Sujet"
+          [(ngModel)]="contactForm.subject"
+          required
+          class="field field-subject"
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Votre message..."
+          [(ngModel)]="contactForm.message"
+          required
+          class="field field-message"
+        ></textarea>
+      </div>
+
+      <a
+        [href]="
+          'mailto:aupetitvillage@mail.com?subject=' +
+          contactForm.subject +
+          '&body=' +
+          'Nom: ' +
+          contactForm.name +
+          '%0AEmail: ' +
+          contactForm.email +
+          '%0AMessage: ' +
+          contactForm.message
+        "
+      >
+        <button type="button" [disabled]="!areAllRequired()">Envoyer</button>
+      </a>
+    </form>
+  </section>
+</main>
